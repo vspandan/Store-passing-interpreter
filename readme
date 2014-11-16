@@ -1,0 +1,37 @@
+Implemention of store passing, implicit allocation, call by value interpreter. 
+
+
+
+;;; ==================================================================
+;;; Abstract Syntax for the STORE-PASSING/IMPLICIT ALLOCATION language
+;;; ==================================================================
+
+
+
+;;; <ast> ::= <num-ast> |
+;;;           <bool-ast> |
+;;;           <id-ref-ast> |
+;;;           <assume-ast> |
+;;;           <ifte-ast>   |  
+;;;           <rec-ast> |
+;;;           <function-ast> |
+;;;           <app-ast> |
+
+;;;           <set-ast> |
+;;;           <seq-ast>
+
+;;; <num-ast>        ::= (number <number>)
+;;; <bool-ast>       ::= (boolean <boolean>)
+;;; <function-ast>   ::= (function (<id> ... ) <ast>)
+;;; <app-ast>        ::= (app  <ast>  <ast> ...)
+;;; <assume-ast>     ::= (assume (<bind> ...) <ast>)
+;;; <bind-ast>       ::= (<id> <ast>)
+;;; <id-ref-ast>     ::= (id-ref <id>)
+;;; <id>             ::= <symbol>
+;;; <ifte-ast>       ::= (ifte <ast> <ast> <ast>)
+;;; <assume-rec-ast> ::= (assume-rec (<bind> ...) <ast>)
+
+;;; <set-ast>        ::= (set <id> <ast>)
+;;; <seq-ast>        ::= (seq <ast> <ast> ...)
+
+
